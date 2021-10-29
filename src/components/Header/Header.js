@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import useAuth from '../../Hooks/useAuth';
+import useFirebase from '../../Hooks/useFirebase';
 
 const Header = () => {
-    // const {user, logOut} = useAuth();
+    const {user, logOut} = useFirebase();
     return (
         <>
         <nav className="navbar mb-5 navbar-expand-lg navbar-light bg-success fixed-top">
@@ -16,7 +16,7 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <HashLink className="nav-link text-white active" aria-current="page" to="/home">Home</HashLink>
+          <HashLink className="nav-link text-white active" aria-current="page" to="/home#home">Home</HashLink>
         </li>
         <li className="nav-item">
           <Link className="nav-link text-white" to="/services">Services</Link>
@@ -28,17 +28,18 @@ const Header = () => {
           <HashLink className="nav-link text-white" to="/home#contact">Contact</HashLink>
         </li>
         
+        
         <li className="nav-item">
-          {/* {user?.email ?
+          {user?.email ?
               <button onClick={logOut} className="btn btn-light">Logout</button>:
               <Link className="nav-link text-white" to="/login">Login</Link>
-              } */}
+              }
         </li>
        
       </ul>
       <span className="navbar-text">
-        signin as: <a className="text-white" href="#login">{
-            // user?.email
+        signin as: <a className="text-white" href="/login">{
+            user?.email 
         }</a>
       </span>
     </div>
