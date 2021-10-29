@@ -6,11 +6,14 @@ import Header from './components/Header/Header';
 import Services from './components/Services/Services';
 import Login from './components/Login/Login';
 import AuthProvider from './Context api/AuthProvider';
+import PrivetRoute from './components/PrivetRoute/PrivateRoute';
+import AddService from './components/AddService/AddService';
 
 function App() {
   return (
     <div className="App">
       
+      <AuthProvider>
       <BrowserRouter>
       <Header></Header>
       <Switch>
@@ -20,14 +23,18 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-        <Route path="/services">
+        <PrivetRoute path="/services">
           <Services></Services>
-        </Route>
+        </PrivetRoute>
         <Route path="/login">
           <Login></Login>
         </Route>
+        <Route path="/addservice">
+          <AddService></AddService>
+        </Route>
       </Switch>
       </BrowserRouter>
+      </AuthProvider>
       
     </div>
   );

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
+
 
 const Header = () => {
-    const {user, logOut} = useFirebase();
+    const {user, logOut} = useAuth();
     return (
         <>
         <nav className="navbar mb-5 navbar-expand-lg navbar-light bg-success fixed-top">
@@ -20,6 +21,9 @@ const Header = () => {
         </li>
         <li className="nav-item">
           <Link className="nav-link text-white" to="/services">Services</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link text-white" to="/addservice">Add Service</Link>
         </li>
         <li className="nav-item">
           <HashLink className="nav-link text-white" to="/home#about">About</HashLink>
