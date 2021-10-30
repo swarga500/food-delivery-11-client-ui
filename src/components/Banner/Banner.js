@@ -11,13 +11,13 @@ const Banner = () => {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://i.ibb.co/hVQCqz8/Successful-medical-team.jpg" class="d-block w-100" alt="..." />
+      <img src="https://i.ibb.co/p1T0DR5/fuska.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://i.ibb.co/BgqtnmP/doctor-nurses-special-equipment.jpg" class="d-block w-100" alt="..." />
+      <img src="https://i.ibb.co/2PmpDc6/biriyani.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://i.ibb.co/567JML3/young-female-doctor-posing-corridor-hospital.jpg" class="d-block w-100" alt="..." />
+      <img src="https://i.ibb.co/1dBqx3d/chotpoti.jpg" class="d-block w-100" alt="..." />
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -8,6 +8,12 @@ import Login from './components/Login/Login';
 import AuthProvider from './Context api/AuthProvider';
 import PrivetRoute from './components/PrivetRoute/PrivateRoute';
 import AddService from './components/AddService/AddService';
+import Booking from './components/Booking/Booking';
+import MyOrders from './components/MyOrders/MyOrders';
+import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
+import Order from './components/MyOrders/Order';
+import AllOrder from './components/ManageAllOrder/AllOrder';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -29,8 +35,23 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
+        <Route path="/booking/:serviceId">
+          <Booking></Booking>
+        </Route>
         <Route path="/addservice">
           <AddService></AddService>
+        </Route>
+        <Route path="/myorders">
+          <MyOrders></MyOrders>
+          <Order></Order>
+        </Route>
+        <Route path="/manageallorder">
+          <ManageAllOrder></ManageAllOrder>
+          <AllOrder></AllOrder>
+        </Route>
+        <Route path="*">
+          <NotFound></NotFound>
+
         </Route>
       </Switch>
       </BrowserRouter>
