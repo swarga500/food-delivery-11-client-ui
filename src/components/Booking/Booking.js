@@ -9,7 +9,7 @@ const Booking = () => {
     const onSubmit = data => {
         console.log(data)
         reset()
-        fetch('http://localhost:5000/orders',{
+        fetch('https://protected-sands-12497.herokuapp.com//orders',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'
