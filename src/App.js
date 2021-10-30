@@ -47,7 +47,7 @@ function App() {
         </Route>
         <Route path="/manageallorder">
           <ManageAllOrder></ManageAllOrder>
-          <AllOrder></AllOrder>
+          
         </Route>
         <Route path="*">
           <NotFound></NotFound>
