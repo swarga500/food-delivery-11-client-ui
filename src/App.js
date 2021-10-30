@@ -43,7 +43,6 @@ function App() {
         </Route>
         <Route path="/myorders">
           <MyOrders></MyOrders>
-          <Order></Order>
         </Route>
         <Route path="/manageallorder">
           <ManageAllOrder></ManageAllOrder>
