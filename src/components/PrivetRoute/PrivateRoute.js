@@ -1,14 +1,17 @@
 import { Redirect, Route } from "react-router";
 import useAuth from "../../Hooks/useAuth";
-import useFirebase from "../../Hooks/useFirebase";
 
 
 
 
 const PrivetRoute = ({ children, ...rest }) => {
-    const {user} = useAuth()
+    const {user, isLoading} = useAuth()
    
-    console.log(user?.email)
+    if(isLoading){
+        return <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    }
     
     return (
         <Route

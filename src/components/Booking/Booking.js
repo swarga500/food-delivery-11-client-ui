@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import useAuth from '../../Hooks/useAuth'
-import { useForm } from 'react-hook-form';
 
 const Booking = () => {
     const {user} = useAuth();
