@@ -8,6 +8,8 @@ const AddService = () => {
     console.log(data);
    axios.post('https://protected-sands-12497.herokuapp.com/tickets',data)
    .then(res =>{
+    alert('Add success')
+    
        console.log(res)
        reset()
    })

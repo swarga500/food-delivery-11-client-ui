@@ -13,12 +13,16 @@ const ManageAllOrder = () => {
     return (
         <div>
             <h1>manage all order</h1>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
             {
                 orders.map(order => <AllOrder
                 key={order._id}
                 order={order}
+                orders={orders}
+                setOrders={setOrders}
                 ></AllOrder>)
             }
+            </div>
         </div>
     );
 };

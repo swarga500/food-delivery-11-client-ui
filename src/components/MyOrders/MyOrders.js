@@ -14,13 +14,17 @@ const MyOrders = () => {
     return (
         <div>
             <h1>your orders</h1>
-            {
-              orders.filter(order => user.email === order.email).map(order => <Order
+           <div class="row row-cols-1 row-cols-md-4 g-4">
+           {
+              orders.filter(s => user.email === s.email).map(order => <Order
               key={order._id}
               order={order}
+              orders ={orders}
+              setOrders ={setOrders}
               ></Order>,
               )
             }
+           </div>
         </div>
     );
 };
