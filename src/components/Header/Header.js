@@ -17,12 +17,13 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <HashLink className="nav-link text-white active" aria-current="page" to="/home">Home</HashLink>
+          <Link className="nav-link text-white active" aria-current="page" to="/home">Home</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link text-white" to="/services">Services</Link>
         </li>
-        <li className="nav-item">
+        {user.email && <>
+          <li className="nav-item">
           <Link className="nav-link text-white" to="/addservice">Add Service</Link>
         </li>
         <li className="nav-item">
@@ -32,6 +33,7 @@ const Header = () => {
         <li className="nav-item">
           <Link className="nav-link text-white" to="/manageallorder">Manage Orders</Link>
         </li>
+          </>}
         <li className="nav-item">
           <HashLink className="nav-link text-white" to="/home#about">About</HashLink>
         </li>

@@ -30,7 +30,7 @@ const Booking = () => {
 
     return (
         <div>
-            <h1> bookig</h1>
+            <h1> Booking</h1>
             <form onSubmit={handleBooking} className="w-50 mx-auto mt-3">
                 <div className="row mb-3">
                     <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Name</label>
