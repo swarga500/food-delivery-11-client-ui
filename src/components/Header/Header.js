@@ -17,7 +17,7 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <HashLink className="nav-link text-white active" aria-current="page" to="/home#home">Home</HashLink>
+          <HashLink className="nav-link text-white active" aria-current="page" to="/home">Home</HashLink>
         </li>
         <li className="nav-item">
           <Link className="nav-link text-white" to="/services">Services</Link>

@@ -11,8 +11,6 @@ import AddService from './components/AddService/AddService';
 import Booking from './components/Booking/Booking';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
-import Order from './components/MyOrders/Order';
-import AllOrder from './components/ManageAllOrder/AllOrder';
 import NotFound from './components/NotFound/NotFound';
 
 function App() {
@@ -29,9 +27,9 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-        <PrivetRoute path="/services">
+        <Route path="/services">
           <Services></Services>
-        </PrivetRoute>
+        </Route>
         <Route path="/login">
           <Login></Login>
         </Route>
@@ -41,14 +39,16 @@ function App() {
         <Route path="/addservice">
           <AddService></AddService>
         </Route>
-        <Route path="/myorders">
+        <PrivetRoute path="/myorders">
           <MyOrders></MyOrders>
-        </Route>
+        </PrivetRoute>
         
-        <Route path="/manageallorder">
+        <PrivetRoute path="/manageallorder">
           <ManageAllOrder></ManageAllOrder>
-          
-        </Route>
+        </PrivetRoute>
+        <PrivetRoute path="/booking">
+          <Booking></Booking>
+        </PrivetRoute>
         <Route path="*">
           <NotFound></NotFound>
 

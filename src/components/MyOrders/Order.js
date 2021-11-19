@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Order = ({order,orders, setOrders}) => {
-    console.log(order?.email)
-    const {email,_id,name,phone} = order;
+const Order = ({myOrder,myOrders, setOrders}) => {
+    console.log(myOrder?.email)
+    const {email,_id,name,phone} = myOrder;
 
 
     const cancelOrder = id =>{
@@ -17,7 +17,7 @@ const Order = ({order,orders, setOrders}) => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('deleted successfully');
-                        const remainingOrder = orders.filter(order => order._id !== id);
+                        const remainingOrder = myOrders.filter(order => order._id !== id);
                         setOrders(remainingOrder);
                     }
                 });
@@ -37,7 +37,7 @@ const Order = ({order,orders, setOrders}) => {
       <p class="card-text">Phone: {phone}</p>
       <p class="card-text">Email: {email}</p>
         
-        <button className="btn btn-primary" onClick={ ()=> cancelOrder(order?._id)}>Cancel</button>
+        <button className="btn btn-primary" onClick={ ()=> cancelOrder(myOrder._id)}>Cancel</button>
         
       </div>
     </div>
