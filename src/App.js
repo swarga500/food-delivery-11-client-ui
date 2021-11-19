@@ -43,9 +43,9 @@ function App() {
           <MyOrders></MyOrders>
         </PrivetRoute>
         
-        <PrivetRoute path="/manageallorder">
+        <Route path="/manageallorder">
           <ManageAllOrder></ManageAllOrder>
-        </PrivetRoute>
+        </Route>
         <PrivetRoute path="/booking">
           <Booking></Booking>
         </PrivetRoute>
